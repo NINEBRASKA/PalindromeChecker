@@ -14,32 +14,24 @@ public void setup()
     }
   }
 }
-
 public boolean palindrome(String word)
 {
   if(onlyLetters(word).equals(reverse(onlyLetters(word))))
     return true;
   return false;
 }
-
-
-
-public String onlyLetters(String sString){
+public String onlyLetters(String sString)
+{
   String newString = new String();
   for(int i = 0 ; i<sString.length() ; i++)
     if(Character.isLetter(sString.charAt(i)) == true)
       newString = newString + sString.charAt(i);
-    
   return newString.toLowerCase();
 }
-
-
 public String reverse(String str)
 {
     String sNew = new String();
-
     for(int i = str.length()-1 ; i>-1 ; i--)
       sNew = sNew + str.charAt(i);
-
-    return sNew.toLowerCase(); // makes it all lower case
+    return sNew.toLowerCase();
 }
